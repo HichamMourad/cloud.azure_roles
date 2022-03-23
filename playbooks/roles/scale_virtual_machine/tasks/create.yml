@@ -75,7 +75,8 @@
     name: "{{ azure_vm_name }}ss"
     vm_size: "{{ azure_vm_size }}"
     capacity: "{{ azure_number_vm }}"
-    tier: "{{ azure_vm_size | regex_search('(Standard|Basic)_*', '\\1') | first }}"
+    #tier: "{{ azure_vm_size | regex_search('(Standard|Basic)_*', '\\1') | first }}"
+    tier: "{{ azure_vm_size }}"
     upgrade_policy: Manual
     admin_username: "{{ azure_vm_user }}"
     admin_password: "{{ azure_vm_user_password }}"
