@@ -4,12 +4,12 @@ azure_vm_user: "ansible"
 azure_vm_user_password: "4fB5In3ueO7,"
 
 # Source
-source_resource_group: src_rg
+source_resource_group: webappeus
 source_region: eastus
 
 # Destination
-destination_resource_group: dst_rg
-destination_region: canadacentral
+destination_resource_group: webappcus
+destination_region: centralus
 
 # PostgreSQL Server variables
 azure_postgresql_name: "{{ source_resource_group | replace('_', '-') }}-dbserver"
