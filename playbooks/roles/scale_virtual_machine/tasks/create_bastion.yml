@@ -33,7 +33,8 @@
     admin_username: "{{ azure_vm_user }}"
     admin_password: "{{ azure_vm_user_password }}"
     image: "{{ azure_vm_image }}"
-    vm_size: Standard_DS4_v2
+    #vm_size: Standard_DS4_v2
+    vm_size: "{{ azure_vm_size }}"
     ssh_password_enabled: yes
     managed_disk_type: Standard_LRS
     os_type: Linux
