@@ -15,7 +15,7 @@
     when: azure_resource_group is not defined
 
   - name: Create application infrastructure
-    import_role:
+    ansible.builtin.import_role:
       name: scale_virtual_machine
 
   - block:
@@ -26,7 +26,7 @@
       register: _server
 
     - name: Create PostgreSQL database instance
-      import_role:
+      ansible.builtin.import_role:
         name: managed_postgresql
       when: _server.servers | length == 0
 
